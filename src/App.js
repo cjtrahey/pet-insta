@@ -13,11 +13,25 @@ function App() {
         />
     </div>
 
-    <h1> There's a snake in my boot! Instagram Clone!!</h1>
+    {/* <h1> There's a snake in my boot! Instagram Clone!!</h1> */}
 
-      <Post />
-      {/*Posts*/}
-      {/*Posts*/}
+      <Post 
+        username="Trah.03" 
+        caption="Wow! It works!" 
+        imageUrl="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+         />
+
+      <Post 
+        username="joeburrow9" 
+        caption="Guess we'll just win it all while we're at it" 
+        imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkvFCLSMbUU6Bqb1m-0y3LPAQ7_Gcs-PNZw&usqp=CAU"
+         /> 
+
+      <Post 
+      username="kingjames" 
+      caption="#JustAKidFromAkron" 
+      imageUrl="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+       />
     </div>
   );
 }
