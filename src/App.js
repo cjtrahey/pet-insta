@@ -1,8 +1,22 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Post from './Post';
 
 function App() {
+  const [posts, setPosts] = useState([
+    // Loads post structure
+    {
+      username:"Trah.03",
+      caption:"Wow! It works!",
+      imageUrl:"https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+      username:"Trah.03",
+      caption:"Wow! It works!",
+      imageUrl:"https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    }
+  ]);
+
   return (
     <div className="app">
     <div className="app__header">
@@ -14,24 +28,12 @@ function App() {
     </div>
 
     {/* <h1> There's a snake in my boot! Instagram Clone!!</h1> */}
+      {
+        posts.map(post => (
+          <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
+        ))
+      }
 
-      <Post 
-        username="Trah.03" 
-        caption="Wow! It works!" 
-        imageUrl="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
-         />
-
-      <Post 
-        username="joeburrow9" 
-        caption="Guess we'll just win it all while we're at it" 
-        imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkvFCLSMbUU6Bqb1m-0y3LPAQ7_Gcs-PNZw&usqp=CAU"
-         /> 
-
-      <Post 
-      username="kingjames" 
-      caption="#JustAKidFromAkron" 
-      imageUrl="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80"
-       />
     </div>
   );
 }

@@ -11,11 +11,14 @@ function Post({ username, caption, imageUrl }) {
                 alt='Trah.03'
                 src="/static/images/avatar/1.jpg"
             />
-            <h3>{ username }</h3>
+            <h3>{username}</h3>
         </div>
 
-        <img className="post__image" 
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkvFCLSMbUU6Bqb1m-0y3LPAQ7_Gcs-PNZw&usqp=CAU" />
+        <img
+        className="post__image" 
+        src={imageUrl}
+        alt=""
+         />
 
         <h4 className="post__text"><strong>{username}</strong> {caption}</h4>
     </div>
